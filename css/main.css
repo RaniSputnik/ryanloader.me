@@ -97,7 +97,7 @@ li.gap { margin-bottom: 16px; }
     margin-bottom: 4em;
 }
 
-#projects, #aboutme {
+#projects, #aboutme, #blog {
     margin:auto;
     max-width:26em;
     margin-bottom: 4em;
@@ -137,6 +137,13 @@ li.gap { margin-bottom: 16px; }
     line-height:1.6em;
 }
 
+#blog dt {
+	margin-top:1em;
+}
+#blog dd {
+	margin-bottom: 1em;
+}
+
 /* Mobile Landscape Size to Tablet Portrait */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	h1 { font-size: 4em; }
@@ -153,8 +160,10 @@ li.gap { margin-bottom: 16px; }
     #greetings { margin-bottom: 6em; }
     #greetings p { margin-bottom: 2em; }
     #social-media { position:fixed; bottom:0px; margin-top:4em; }
-    #projects, #aboutme { max-width:40em; margin-bottom:6em; }
-    #aboutme { margin-bottom: 10em; }
+    #projects, #aboutme, #blog { max-width:40em; }
+    #projects { margin-bottom: 6em; }
+    #aboutme { margin-bottom:6em; }
+    #blog { margin-bottom:10em; }
 }
 
 #me {
