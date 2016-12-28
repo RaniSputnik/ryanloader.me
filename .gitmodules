@@ -1,0 +1,3 @@
+[submodule "earthships"]
+	path = earthships
+	url = https://github.com/RaniSputnik/ryanloader.me-earthships
