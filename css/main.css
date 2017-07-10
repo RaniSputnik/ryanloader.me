@@ -128,9 +128,11 @@ li.gap { margin-bottom: 16px; }
 }
 
 #social-media {
+	position:fixed; 
+	bottom:0px; 
+	margin-top:4em;
     color: #dce4e8;
     background:#272d33;
-    margin-top:1em;
 	padding-top:1em;
 	padding-bottom:1em;
     width:100%;
@@ -157,9 +159,8 @@ li.gap { margin-bottom: 16px; }
 	footer { margin-left: 10%; }
 	h1 { font-size: 5em; }
 	#heading-wrapper { padding-top:6em; padding-bottom: 4em; }
-    #greetings { margin-bottom: 6em; }
+    #greetings { margin-bottom: 6em; font-size: 1.4rem; line-height:2em; }
     #greetings p { margin-bottom: 2em; }
-    #social-media { position:fixed; bottom:0px; margin-top:4em; }
     #projects, #aboutme { max-width:40em; }
     #projects { margin-bottom: 6em; }
     #aboutme { margin-bottom:10em; }
