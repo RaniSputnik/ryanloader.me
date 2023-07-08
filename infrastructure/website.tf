@@ -1,8 +1,3 @@
-provider "aws" {
-  alias  = "nz_legacy"
-  region = "ap-southeast-2"
-}
-
 resource "aws_s3_bucket" "assets" {
   provider = aws.nz_legacy
   bucket   = var.primary_zone

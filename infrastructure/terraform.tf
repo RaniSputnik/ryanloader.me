@@ -19,12 +19,25 @@ terraform {
 
 provider "aws" {
   region = "eu-west-1"
+  default_tags { tags = local.tags }
+}
 
-  default_tags {
-    tags = {
-      Repository = var.repository
-      Workload   = var.workload
-      CreatedBy  = "Terraform"
-    }
+provider "aws" {
+  alias  = "acm"
+  region = "us-east-1"
+  default_tags { tags = local.tags }
+}
+
+provider "aws" {
+  alias  = "nz_legacy"
+  region = "ap-southeast-2"
+  default_tags { tags = local.tags }
+}
+
+locals {
+  tags = {
+    Repository = var.repository
+    CreatedBy  = "Terraform"
+    Workload   = "Public Website"
   }
 }
