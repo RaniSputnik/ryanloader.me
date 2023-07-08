@@ -30,3 +30,15 @@ resource "aws_route53_record" "spf" {
   ttl     = 300
   records = ["v=spf1 include:_spf.hostedemail.com include:hover.com ~all"]
 }
+
+resource "aws_route53_record" "public" {
+  for_each = toset([var.primary_zone, "www.${var.primary_zone}"])
+  zone_id  = aws_route53_zone.primary.zone_id
+  name     = each.key
+  type     = "A"
+  alias {
+    name                   = aws_cloudfront_distribution.public.domain_name
+    zone_id                = aws_cloudfront_distribution.public.hosted_zone_id
+    evaluate_target_health = false
+  }
+}
