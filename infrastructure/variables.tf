@@ -1,9 +1,3 @@
-variable "workload" {
-  type        = string
-  default     = "DNS"
-  description = "What this infrastructure is for"
-}
-
 variable "repository" {
   type        = string
   default     = "github.com/RaniSputnik/ryanloader.me"
