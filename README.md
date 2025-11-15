@@ -9,5 +9,5 @@ I host this site using [Amazon Web Services](https://aws.amazon.com/) for about 
 Ensure the [AWS CLI](https://aws.amazon.com/cli/) is installed.
 
 ```
-aws s3 sync ./public s3://ryanloader.me --exclude *.DS_Store
+aws s3 sync ./public s3://ryanloader.me
 ```
